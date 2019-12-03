@@ -1,7 +1,0 @@
-current directory: /home/player/workspace/vendor/bundle/ruby/2.6.0/gems/ruby-debug-ide-0.7.0/ext
-/home/player/.rbenv/versions/2.6.3/bin/ruby mkrf_conf.rb
-Installing base gem
-Building native extensions. This could take a while...
-
-current directory: /home/player/workspace/vendor/bundle/ruby/2.6.0/gems/ruby-debug-ide-0.7.0/ext
-/home/player/.rbenv/versions/2.6.3/bin/ruby -rrubygems /home/player/workspace/vendor/bundle/ruby/2.6.0/gems/rake-13.0.1/exe/rake RUBYARCHDIR\=/home/player/workspace/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0-static/ruby-debug-ide-0.7.0 RUBYLIBDIR\=/home/player/workspace/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0-static/ruby-debug-ide-0.7.0
