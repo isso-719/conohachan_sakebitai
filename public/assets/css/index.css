@@ -341,9 +341,9 @@ main {
   text-decoration: none;
   opacity: 0.7;
 }
-#pageTop .fa-chevron-up {
-  top: 17.5px;
-  left: 17.5px;
+.up {
+  top: 12px;
+  left: 18.5px;
   position: absolute;
 }
 footer {
