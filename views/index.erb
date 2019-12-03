@@ -2,40 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <!-- 説明文記述する -->
   <meta name="description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="ISSO CREATIVE CENTER">
-  <!-- 説明文記述する -->
+  <meta itemprop="name" content="このはちゃんに愛を叫びたい">
   <meta itemprop="description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
-  <!-- 画像作る -->
-  <meta itemprop="image" content="...">
-
-  <!-- Facebook Meta Tags -->
+  <meta itemprop="image" content="assets/images/ogp.png">
   <meta property="og:url" content="https://conosake.isso.cc">
   <meta property="og:type" content="website">
   <meta property="og:title" content="このはちゃんに愛を叫びたい">
-  <!-- 説明文記述する -->
   <meta property="og:description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
-  <!-- 画像作る -->
-  <meta property="og:image" content="...">
-
-  <!-- Twitter Meta Tags -->
+  <meta property="og:image" content="assets/images/ogp.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="このはちゃんに愛を叫びたい">
-  <!-- 説明文記述する -->
   <meta name="twitter:description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
-  <!-- 画像作る -->
-  <meta name="twitter:image" content="">
-
+  <meta name="twitter:image" content="assets/images/ogp.png">
+  <meta name="twitter:site" content="@i5so_" />
   <link rel="canonical" href="https://conosake.isso.cc" />
-  <!-- favicon作る -->
   <link rel="icon" href="assets/images/favicon.ico" />
-  <!-- アプリアイコン画像作る -->
   <link rel="apple-touch-icon" href="assets/images/favicon.ico" />
-  <!-- RSSフィード作る -->
   <link rel="alternate" type="application/rss+xml" href="https://conosake.isso.cc/sitemap.xml" />
   <link rel="stylesheet" href="assets/css/index.css" type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -80,7 +64,7 @@
             <div class="form-group"> <label for="author">ニックネーム</label> <input type="text" name="author" class="form-control" id="author" aria-describedby="authorHelp" placeholder="ex.いっそ" required> </div>
             <div class="form-group"> <label for="message">このはちゃんへメッセージ</label> <textarea name="message" class="form-control" id="message" rows="3" placeholder="ex.好きだああああああ!!!" required></textarea> <small id="formHelp" class="form-text text-muted">このはちゃんへの愛のみ投稿可能です。<br>不適切な表現はおやめください。</small> </div> <button type="submit" class="btn btn-primary">Submit</button><hr><p class="explain">この企画は<a href="https://www.conoha.jp/">ConoHa</a>が<a href="https://qiita.com/">Qiita</a>上で主催する<a href="https://qiita.com/advent-calendar/2019/conoha">ConoHa Advent Calendar 2019</a>の出し物です。<br>記事は<a href="">こちら</a></p>
             <hr><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#このはちゃんに愛を叫びたい" data-url="https://example.com" data-show-count="false">Tweet</a> <a href="https://twitter.com/i5so_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-lang="en" data-show-count="false">Follow @i5so_</a> <button type="button" class="btn btn-primary btn-xs" onclick="location.href='https://www.conoha.jp/'">ConoHa</button> <button type="button" class="btn btn-secondary btn-xs" onclick="location.href='https://isso.cc'">isso.cc</button></div>
-        <div class="messages">
+        <div id="messages" class="messages">
           <section class="card">
             <div class="card-content">
               <h2>みんなの投稿</h2>
@@ -100,7 +84,7 @@
             </section>
           <% end %>
           <div class="digg_pagination">
-            <%= will_paginate @counts, inner_window: 1, previous_label: "<前", next_label: "次>", :params => {:anchor => "main"} %>
+            <%= will_paginate @counts, inner_window: 1, previous_label: "<前", next_label: "次>", :params => {:anchor => "messages"} %>
           </div>
         </div>
       </div>
@@ -118,6 +102,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js"></script>
-  <script>$(function(){$(window).on("load",function(){$("#loader-wrap").delay(1000).fadeOut("slow")});function loaderClose(){$("#loader-wrap").fadeOut("slow")}setTimeout(loaderClose,10000)});$(function(){var topBtn=$("#pageTop");topBtn.hide();$(window).scroll(function(){if($(this).scrollTop()>80){topBtn.fadeIn()}else{topBtn.fadeOut()}});topBtn.click(function(){$("body,html").animate({scrollTop:0},500);return false})});$(function(){var page=purl().param("page");var anchor=purl().param("anchor");if(purl().param("anchor")==="main"){location.href=`/?page=${page}#main`}});$(function(){var scene_title=document.getElementById('scene-title');var parallaxInstance=new Parallax(scene_title,{limitX:50,limitY:50,})});$(function(){var scene=document.getElementById('scene');var parallaxInstance=new Parallax(scene,{limitX:50,limitY:50,})});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84261059-8"></script>
+  <script>$(function(){$(window).on("load",function(){$("#loader-wrap").delay(1000).fadeOut("slow")});function loaderClose(){$("#loader-wrap").fadeOut("slow")}setTimeout(loaderClose,10000)});$(function(){var topBtn=$("#pageTop");topBtn.hide();$(window).scroll(function(){if($(this).scrollTop()>80){topBtn.fadeIn()}else{topBtn.fadeOut()}});topBtn.click(function(){$("body,html").animate({scrollTop:0},500);return false})});$(function(){var page=purl().param("page");var anchor=purl().param("anchor");if(purl().param("anchor")==="messages"){location.href=`/?page=${page}#messages`}});$(function(){var scene_title=document.getElementById('scene-title');var parallaxInstance=new Parallax(scene_title,{limitX:50,limitY:50,})});$(function(){var scene=document.getElementById('scene');var parallaxInstance=new Parallax(scene,{limitX:50,limitY:50,})});</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84261059-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-84261059-8');
+  </script>
 </body>
 </html>
