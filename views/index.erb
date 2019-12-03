@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <!-- 説明文記述する -->
+  <meta name="description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="ISSO CREATIVE CENTER">
+  <!-- 説明文記述する -->
+  <meta itemprop="description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
+  <!-- 画像作る -->
+  <meta itemprop="image" content="...">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://conosake.isso.cc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="このはちゃんに愛を叫びたい">
+  <!-- 説明文記述する -->
+  <meta property="og:description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
+  <!-- 画像作る -->
+  <meta property="og:image" content="...">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="このはちゃんに愛を叫びたい">
+  <!-- 説明文記述する -->
+  <meta name="twitter:description" content="このはちゃんに愛を叫ぶウェブサイト! ConoHa Advent Calender 2019の出し物です。">
+  <!-- 画像作る -->
+  <meta name="twitter:image" content="">
+
+  <link rel="canonical" href="https://conosake.isso.cc" />
+  <!-- favicon作る -->
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <!-- アプリアイコン画像作る -->
+  <link rel="apple-touch-icon" href="assets/images/favicon.ico" />
+  <!-- RSSフィード作る -->
+  <link rel="alternate" type="application/rss+xml" href="https://conosake.isso.cc/sitemap.xml" />
+  <link rel="stylesheet" href="assets/css/index.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>このはちゃんに愛を叫びたい</title>
+
+
+</head>
+<body>
+  <div id="loader-wrap">
+    <div id="loading"><span class="heartbeat-loader">Loading…</span></div>
+  </div>
+  <div id="wrap">
+    <header>
+      <div class="wrap">
+        <div id="scene-title" class="secMain__title">
+          <div data-depth="0.5"> <img src="assets/images/title.webp" alt="タイトル">
+            <div class="info">
+              <div class="ja">
+                <p class="title">何をするの？</p>
+                <p class="sub">このはちゃんに「愛」を伝えよう！</p>
+              </div>
+              <div class="ja">
+                <p class="title">伝える場所</p>
+                <p class="sub">下のフォームから！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="secMain__conoha">
+          <div id="scene">
+            <div data-depth="0.6"><img src="/assets/images/fanfic_3_shadow.webp" alt="ConoHa応援団長美雲このはの影" class="img-conoha"></div>
+            <div data-depth="0.2"><img src="/assets/images/fanfic_3.webp" alt="ConoHa応援団長美雲このは" class="img-conoha"> </div>
+          </div>
+        </div>
+    </header>
+    <main id="main">
+      <div id="main_wrap">
+        <div class="form">
+          <h2>愛を叫ぼう!</h2>
+          <hr>
+          <form method="post" action="/create">
+            <div class="form-group"> <label for="author">ニックネーム</label> <input type="text" name="author" class="form-control" id="author" aria-describedby="authorHelp" placeholder="ex.いっそ" required> </div>
+            <div class="form-group"> <label for="message">このはちゃんへメッセージ</label> <textarea name="message" class="form-control" id="message" rows="3" placeholder="ex.好きだああああああ!!!" required></textarea> <small id="formHelp" class="form-text text-muted">このはちゃんへの愛のみ投稿可能です。<br>不適切な表現はおやめください。</small> </div> <button type="submit" class="btn btn-primary">Submit</button><hr><p class="explain">この企画は<a href="https://www.conoha.jp/">ConoHa</a>が<a href="https://qiita.com/">Qiita</a>上で主催する<a href="https://qiita.com/advent-calendar/2019/conoha">ConoHa Advent Calendar 2019</a>の出し物です。<br>記事は<a href="">こちら</a></p>
+            <hr><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#このはちゃんに愛を叫びたい" data-url="https://example.com" data-show-count="false">Tweet</a> <a href="https://twitter.com/i5so_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-lang="en" data-show-count="false">Follow @i5so_</a> <button type="button" class="btn btn-primary btn-xs" onclick="location.href='https://www.conoha.jp/'">ConoHa</button> <button type="button" class="btn btn-secondary btn-xs" onclick="location.href='https://isso.cc'">isso.cc</button></div>
+        <div class="messages">
+          <section class="card">
+            <div class="card-content">
+              <h2>みんなの投稿</h2>
+              <hr>
+            </div>
+          </section>
+          <% @counts.each do |count| %>
+            <section id="card<%= count.id %>" class="card">
+              <div class="card-content">
+                <h2 class="card-title">
+                  <%= CGI.escapeHTML(count.author) %>
+                </h2>
+                <hr>
+                <p class="card-text">
+                  <%= CGI.escapeHTML(count.message) %>
+                </p> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="<% if "#{CGI.escapeHTML(count.author)} - #{CGI.escapeHTML(count.message)}".length > 100 %><%= "#{CGI.escapeHTML(count.author)} - #{CGI.escapeHTML(count.message)}"[0, 100] %>... #このはちゃんに愛を叫びたい<% else %><%= "#{CGI.escapeHTML(count.author)} - #{CGI.escapeHTML(count.message)}" %> #このはちゃんに愛を叫びたい<% end %>" data-url="https://example.com/#card<%= count.id %>" data-show-count="false">Tweet</a> </div>
+            </section>
+          <% end %>
+          <div class="digg_pagination">
+            <%= will_paginate @counts, inner_window: 1, previous_label: "<前", next_label: "次>", :params => {:anchor => "main"} %>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+    <p id="pageTop" style="display: block;"><a href="#"><em class="fa fa-chevron-up">　</em></a></p>
+    <footer>
+      <h5>Copyright © KazukiIsogai All Rights Reserved.</h5>
+      <h6>本サイトに掲載しているこのはちゃんの画像は © GMO Internet, Inc. が権利を所有するものであり、再使用は禁止です。</h6>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e04b7045d3.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js"></script>
+  <script>$(function(){$(window).on("load",function(){$("#loader-wrap").delay(1000).fadeOut("slow")});function loaderClose(){$("#loader-wrap").fadeOut("slow")}setTimeout(loaderClose,10000)});$(function(){var topBtn=$("#pageTop");topBtn.hide();$(window).scroll(function(){if($(this).scrollTop()>80){topBtn.fadeIn()}else{topBtn.fadeOut()}});topBtn.click(function(){$("body,html").animate({scrollTop:0},500);return false})});$(function(){var page=purl().param("page");var anchor=purl().param("anchor");if(purl().param("anchor")==="main"){location.href=`/?page=${page}#main`}});$(function(){var scene_title=document.getElementById('scene-title');var parallaxInstance=new Parallax(scene_title,{limitX:50,limitY:50,})});$(function(){var scene=document.getElementById('scene');var parallaxInstance=new Parallax(scene,{limitX:50,limitY:50,})});</script>
+</body>
+</html>
