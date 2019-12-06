@@ -10,7 +10,6 @@ require 'will_paginate/array'
 helpers WillPaginate::Sinatra
 
 get '/' do
-  cache_control :public, :max_age => 31536000
   @counts = Count.all.reverse.paginate(:page => params[:page], :per_page => 7)
   erb :index
 end
