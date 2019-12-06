@@ -36,7 +36,11 @@
     <header>
       <div class="wrap">
         <div id="scene-title" class="secMain__title">
-          <div data-depth="0.5"> <img src="assets/images/title.webp" alt="タイトル">
+          <div data-depth="0.5">
+            <picture>
+              <source type="image/webp" srcset="assets/images/title.webp">
+              <img src="assets/images/title.png" alt="タイトル">
+            </picture>
             <div class="info">
               <div class="ja">
                 <p class="title">何をするの？</p>
@@ -51,8 +55,18 @@
         </div>
         <div class="secMain__conoha">
           <div id="scene">
-            <div data-depth="0.6"><img src="/assets/images/fanfic_3_shadow.webp" alt="ConoHa応援団長美雲このはの影" class="img-conoha"></div>
-            <div data-depth="0.2"><img src="/assets/images/fanfic_3.webp" alt="ConoHa応援団長美雲このは" class="img-conoha"> </div>
+            <div data-depth="0.6">
+              <picture class="img-conoha">
+                <source srcset="/assets/images/fanfic_3_shadow.webp" type="image/webp">
+                <img src="/assets/images/fanfic_3_shadow.png" alt="ConoHa応援団長美雲このはの影">
+              </picture>
+            </div>
+            <div data-depth="0.2">
+              <picture class="img-conoha">
+                <source srcset="/assets/images/fanfic_3.webp" type="image/webp">
+                <img src="/assets/images/fanfic_3.png" alt="ConoHa応援団長美雲このは">
+              </picture>
+            </div>
           </div>
         </div>
     </header>
