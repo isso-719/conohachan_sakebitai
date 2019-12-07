@@ -100,13 +100,17 @@ header {
     vertical-align: top;
   }
 }
+.info h1 {
+  font-size: calc(8px + 2vmin);
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
 .info p.title {
   color: #fff;
   background: #e62a6f;
   display: inline-block;
   padding: 9px 13px;
   border-radius: 10px;
-  margin: 1em;
 }
 .info p.sub {
   margin: 0 1.5em 1.5em 1.5em;
