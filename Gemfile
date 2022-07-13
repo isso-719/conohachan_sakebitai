@@ -12,7 +12,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 gem 'sinatra-activerecord'
-gem 'activerecord','5.2.3'
+gem 'activerecord','5.2.8.1'
 gem 'rake'
 gem 'bcrypt'
 
